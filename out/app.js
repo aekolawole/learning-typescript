@@ -49,22 +49,24 @@ if (btnLogin)
 // prettier-ignore
 if (btnSum)
     btnSum.addEventListener("click", () => {
+        // spnResult.textContent = "";
         let txtFirstNum = firstNum.value;
         let txtSecondNum = secondNum.value;
         let isFirstEmpty = !firstNum || 0 === firstNum.value.length;
         let isSecondEmpty = !secondNum || 0 === secondNum.value.length;
         let txtResult = addTwoNumbers(+txtFirstNum, +txtSecondNum);
-        if (txtResult < 0) {
-            spnResult.textContent = "";
-        }
-        else {
-            spnResult.textContent = txtResult.toString();
-        }
+        // if (txtResult === " ") {
+        //   spnResult.textContent = "55555 ";
+        // } else {
+        //   spnResult.textContent = txtResult.toString();
+        // }
         if (isFirstEmpty) {
+            spnResult.textContent = "";
             errorMsg = "Your First input is either wrong or missing.";
             divErrorMsg.textContent = errorMsg;
         }
         if (isSecondEmpty) {
+            spnResult.textContent = "";
             errorMsg = "Your Second input is either wrong or missing.";
             divErrorMsg.textContent = errorMsg;
         }
@@ -146,3 +148,4 @@ if (btnSum)
 //Utility
 const SPACE = " ";
 const COMMA = ",";
+//# sourceMappingURL=app.js.map

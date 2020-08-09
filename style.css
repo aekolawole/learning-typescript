@@ -3,5 +3,9 @@ body {
 }
 #instruction {
   font-style: italic;
+}
+#errorMessage {
   font-style: italic;
+  background-color: yellow;
+  font-size: 80%;
 }
