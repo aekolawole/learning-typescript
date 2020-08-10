@@ -55,11 +55,11 @@ if (btnLogin)
 // prettier-ignore
 if (btnSum)
   btnSum.addEventListener("click", (): void => {
-    // spnResult.textContent = "";
+   spnResult.textContent = "";
     let txtFirstNum = firstNum.value;
     let txtSecondNum = secondNum.value;
-    let isFirstEmpty = !firstNum || 0 === firstNum.value.length;
-    let isSecondEmpty = !secondNum || 0 === secondNum.value.length;
+    let isFirstEmpty = !firstNum || 0 === firstNum.value.length || isNaN(+firstNum.value);
+    let isSecondEmpty = !secondNum || 0 === secondNum.value.length || isNaN(+secondNum.value);
     let txtResult: number = addTwoNumbers(+txtFirstNum, +txtSecondNum);
     if (txtResult === 0 || isNaN(txtResult)) {
       spnResult.textContent = " ";
