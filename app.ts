@@ -61,11 +61,11 @@ if (btnSum)
     let isFirstEmpty = !firstNum || 0 === firstNum.value.length;
     let isSecondEmpty = !secondNum || 0 === secondNum.value.length;
     let txtResult: number = addTwoNumbers(+txtFirstNum, +txtSecondNum);
-    // if (txtResult === " ") {
-    //   spnResult.textContent = "55555 ";
-    // } else {
-    //   spnResult.textContent = txtResult.toString();
-    // }
+    if (txtResult === 0) {
+      spnResult.textContent = " ";
+    } else {
+      spnResult.textContent = txtResult.toString();
+    }
     if (isFirstEmpty) {
       spnResult.textContent = "";
       errorMsg = "Your First input is either wrong or missing.";
