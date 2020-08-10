@@ -55,11 +55,15 @@ if (btnSum)
         let isFirstEmpty = !firstNum || 0 === firstNum.value.length;
         let isSecondEmpty = !secondNum || 0 === secondNum.value.length;
         let txtResult = addTwoNumbers(+txtFirstNum, +txtSecondNum);
-        if (txtResult === 0) {
+        if (txtResult === 0 || isNaN(txtResult)) {
             spnResult.textContent = " ";
+            errorMsg = "No valid result to display";
+            divErrorMsg.textContent = errorMsg;
         }
         else {
             spnResult.textContent = txtResult.toString();
+            errorMsg = "";
+            divErrorMsg.textContent = errorMsg;
         }
         if (isFirstEmpty) {
             spnResult.textContent = "";
